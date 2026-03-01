@@ -1,0 +1,13 @@
+{
+    "name": "skillswap-local-deploy",
+    "version": "1.0.0",
+    "private": true,
+    "engines": {
+        "node": "20.x"
+    },
+    "scripts": {
+        "gcp-build": "npm install --prefix backend && npm install --prefix frontend --legacy-peer-deps && npm run build --prefix frontend",
+        "prestart": "npm install --prefix backend",
+        "start": "node backend/server.js"
+    }
+}
